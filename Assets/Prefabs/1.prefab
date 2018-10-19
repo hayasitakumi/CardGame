@@ -71,7 +71,6 @@ MonoBehaviour:
   parentToReturnTo: {fileID: 0}
   spriteMae: {fileID: 21300000, guid: bffbbfbcab930d845b21bdafc69e5ce1, type: 3}
   spriteAto: {fileID: 21300000, guid: 83aab076fdc586c4686740dfb94d8e39, type: 3}
-  DZ: {fileID: 1608292989953792, guid: 2cfeaff9a362a734caa9287701101ccd, type: 2}
 --- !u!222 &222047663658325014
 CanvasRenderer:
   m_ObjectHideFlags: 1

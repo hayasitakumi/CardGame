@@ -20,14 +20,6 @@ public class DropZone : MonoBehaviour,IDropHandler,IPointerExitHandler{
     public void OnDrop(PointerEventData eventData) {
         Debug.Log(eventData.pointerDrag.name + "was droped on" + gameObject.name);
         location = gameObject.name;
-       /* if (gameObject.name == "Hand")
-        {
-            flag = true;
-        }
-        else if (gameObject.name == "Table")
-        {
-            flag = false;
-        } */
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
         if (d != null)
         {
