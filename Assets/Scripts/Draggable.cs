@@ -11,7 +11,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public Sprite spriteMae;
     public Sprite spriteAto;
 
-    public GameObject DZ;
+    DropZone dz = new DropZone();
 
     public void OnBeginDrag(PointerEventData eventData)
     { 
@@ -36,7 +36,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         this.transform.SetParent( parentToReturnTo);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
 
-        DropZone dz = DZ.GetComponent<DropZone>();
+        
         string location = dz.Decision();
         Debug.Log(location);
 
@@ -48,24 +48,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             this.gameObject.GetComponent<Image>().sprite = spriteAto;
         }
-        
-
-        /*if(DZ.gameObject.GetComponent<DropZone>().flag == "Hand") {
-            Debug.Log("ハンドにある");
-        }
-        else
-        {
-            Debug.Log("テーブルにある");
-        }
-        if(Flag.gameObject.GetComponent<DropZone>().flag == true) {
-            this.gameObject.GetComponent<Image>().sprite = spriteMae;
-            Debug.Log("手札のフラッグを取得");
-        }
-        else if(Flag.gameObject.GetComponent<DropZone>().flag == false)
-        {
-            this.gameObject.GetComponent<Image>().sprite = spriteAto;
-            Debug.Log("テーブルのフラッグを取得");
-        }*/
         
     }
     
